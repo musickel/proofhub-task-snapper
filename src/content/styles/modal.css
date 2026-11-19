@@ -1,0 +1,426 @@
+/* ProofHub Step 3 "Add Task / Subtask" Modal */
+#ts-modal-backdrop {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  margin: 0 !important;
+  padding: 28px 16px !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  background: rgba(9, 30, 66, 0.58) !important;
+  z-index: 2147483649 !important;
+  box-sizing: border-box !important;
+  cursor: default !important;
+}
+
+#ts-description-modal {
+  position: relative !important;
+  margin: auto !important;
+  width: 440px !important;
+  max-width: calc(100vw - 32px) !important;
+  height: auto !important;
+  max-height: calc(100vh - 56px) !important;
+  background: var(--ph-surface) !important;
+  color: var(--ph-text-primary) !important;
+  border: 1px solid var(--ph-border) !important;
+  border-radius: 10px !important;
+  box-shadow: var(--ph-shadow-modal) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  text-align: left !important;
+  letter-spacing: normal !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+#ts-description-modal *,
+#ts-description-modal *::before,
+#ts-description-modal *::after {
+  box-sizing: border-box !important;
+}
+
+#ts-modal-header {
+  display: flex !important;
+  width: 100% !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-shrink: 0 !important;
+  background: var(--ph-surface-header) !important;
+  border-bottom: 1px solid var(--ph-border) !important;
+  padding: 14px 18px !important;
+  margin: 0 !important;
+}
+
+#ts-modal-title-wrap {
+  display: flex !important;
+  align-items: center !important;
+  gap: 9px !important;
+}
+
+#ts-modal-logo-badge {
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 6px !important;
+  background: var(--ph-brand-green) !important;
+  color: #ffffff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+#ts-modal-header h3 {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: inherit !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  color: var(--ph-text-primary) !important;
+}
+
+#ts-modal-close-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 0 30px !important;
+  background: transparent !important;
+  border: none !important;
+  color: var(--ph-text-secondary) !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 22px !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  cursor: pointer !important;
+  padding: 2px 6px !important;
+  margin: 0 !important;
+  border-radius: 4px !important;
+  width: 30px !important;
+  height: 30px !important;
+  min-width: 30px !important;
+  min-height: 30px !important;
+  flex-shrink: 0 !important;
+}
+
+#ts-modal-close-btn:hover {
+  background: var(--ph-btn-sec-hover) !important;
+  color: #de350b !important;
+}
+
+#ts-modal-body {
+  padding: 16px 18px !important;
+  min-height: 0 !important;
+  overflow-y: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+#ts-preview-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 10px !important;
+  flex-shrink: 0 !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.ts-preview-card {
+  border: 1px solid var(--ph-border) !important;
+  border-radius: 6px !important;
+  padding: 7px !important;
+  background: var(--ph-surface-subtle) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 5px !important;
+  min-width: 0 !important;
+}
+
+.ts-preview-card span {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  color: var(--ph-text-secondary) !important;
+  margin: 0 !important;
+}
+
+.ts-preview-card img {
+  width: 100% !important;
+  height: 78px !important;
+  object-fit: contain !important;
+  background: #14161a !important;
+  border-radius: 4px !important;
+  border: 1px solid var(--ph-border) !important;
+  display: block !important;
+  margin: 0 !important;
+}
+
+.ts-preview-skipped {
+  width: 100% !important;
+  height: 78px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: var(--ph-surface-input) !important;
+  color: var(--ph-text-muted) !important;
+  font-size: 12px !important;
+  font-style: italic !important;
+  border-radius: 4px !important;
+  border: 1px dashed var(--ph-border) !important;
+}
+
+#ts-expected-url-preview {
+  display: block !important;
+  flex-shrink: 0 !important;
+  width: 100% !important;
+  min-height: 32px !important;
+  font-size: 12px !important;
+  line-height: 18px !important;
+  color: var(--ph-text-secondary) !important;
+  background: var(--ph-surface-subtle) !important;
+  border: 1px solid var(--ph-border) !important;
+  padding: 6px 10px !important;
+  border-radius: 6px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  margin: 0 !important;
+}
+
+#ts-expected-url-preview strong {
+  font-weight: 700 !important;
+  color: var(--ph-text-primary) !important;
+}
+
+.ts-dynamic-field-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 5px !important;
+  flex-shrink: 0 !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.ts-field-label {
+  display: block !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.3px !important;
+  line-height: 1.3 !important;
+  color: var(--ph-text-secondary) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#ts-description-modal input[type="text"],
+#ts-description-modal input[type="number"],
+#ts-description-modal input[type="date"],
+#ts-description-modal input[type="url"],
+#ts-description-modal input[type="email"],
+#ts-description-modal select {
+  display: block !important;
+  flex-shrink: 0 !important;
+  width: 100% !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  padding: 6px 10px !important;
+  margin: 0 !important;
+  border: 1px solid var(--ph-border) !important;
+  border-radius: 6px !important;
+  font-family: inherit !important;
+  font-size: 13px !important;
+  line-height: 20px !important;
+  color: var(--ph-text-primary) !important;
+  background: var(--ph-surface-input) !important;
+  appearance: auto !important;
+}
+
+#ts-description-modal input:focus,
+#ts-description-modal textarea:focus,
+#ts-description-modal select:focus {
+  outline: none !important;
+  border-color: var(--ph-accent-blue) !important;
+  background: var(--ph-surface-input-focus) !important;
+  box-shadow: 0 0 0 3px var(--ph-accent-blue-soft) !important;
+}
+
+#ts-task-desc-input {
+  display: block !important;
+  flex-shrink: 0 !important;
+  width: 100% !important;
+  height: 84px !important;
+  min-height: 84px !important;
+  padding: 8px 10px !important;
+  margin: 0 !important;
+  border: 1px solid var(--ph-border) !important;
+  border-radius: 6px !important;
+  font-family: inherit !important;
+  font-size: 13px !important;
+  line-height: 19px !important;
+  color: var(--ph-text-primary) !important;
+  background: var(--ph-surface-input) !important;
+  resize: vertical !important;
+}
+
+.ts-dynamic-textarea {
+  display: block !important;
+  flex-shrink: 0 !important;
+  width: 100% !important;
+  height: 58px !important;
+  min-height: 58px !important;
+  padding: 7px 10px !important;
+  margin: 0 !important;
+  border: 1px solid var(--ph-border) !important;
+  border-radius: 6px !important;
+  font-family: inherit !important;
+  font-size: 13px !important;
+  line-height: 18px !important;
+  color: var(--ph-text-primary) !important;
+  background: var(--ph-surface-input) !important;
+  resize: vertical !important;
+}
+
+#ts-dynamic-fields-container {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  flex-shrink: 0 !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.ts-multiselect-box {
+  max-height: 112px !important;
+  min-height: 36px !important;
+  overflow-y: auto !important;
+  border: 1px solid var(--ph-border) !important;
+  border-radius: 6px !important;
+  padding: 7px 9px !important;
+  background: var(--ph-surface-input) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+  flex-shrink: 0 !important;
+}
+
+.ts-empty-options-text {
+  font-size: 12px !important;
+  color: var(--ph-text-muted) !important;
+}
+
+.ts-multiselect-option {
+  display: flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 1.3 !important;
+  color: var(--ph-text-primary) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  cursor: pointer !important;
+  flex-shrink: 0 !important;
+}
+
+.ts-multiselect-option input[type="checkbox"],
+.ts-checkbox-row input[type="checkbox"] {
+  width: 14px !important;
+  height: 14px !important;
+  min-height: 14px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex-shrink: 0 !important;
+  accent-color: var(--ph-accent-blue) !important;
+}
+
+.ts-option-color-dot {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  flex-shrink: 0 !important;
+}
+
+.ts-duration-row {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 8px !important;
+  flex-shrink: 0 !important;
+}
+
+.ts-checkbox-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  color: var(--ph-text-primary) !important;
+  margin: 0 !important;
+  cursor: pointer !important;
+  flex-shrink: 0 !important;
+}
+
+#ts-modal-footer {
+  display: flex !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  align-items: flex-end !important;
+  justify-content: center !important;
+  flex-direction: row !important;
+  padding: 12px 18px !important;
+  margin: 0 !important;
+  background: var(--ph-surface-header) !important;
+  border-top: 1px solid var(--ph-border) !important;
+  box-sizing: border-box !important;
+  flex-shrink: 0 !important;
+}
+
+#ts-submit-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 160px !important;
+  min-width: 160px !important;
+  max-width: 160px !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  padding: 0 18px !important;
+  margin: 0 !important;
+  background: var(--ph-accent-blue) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  font-family: inherit !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  line-height: 36px !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  appearance: none !important;
+  float: none !important;
+  position: static !important;
+  flex: 0 0 auto !important;
+  box-sizing: border-box !important;
+}
+
+#ts-submit-btn:hover:not(:disabled) {
+  background: var(--ph-accent-blue-hover) !important;
+}
+
+#ts-submit-btn:disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+}

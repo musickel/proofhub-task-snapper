@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./popup.css">
+</head>
+<body>
+  <div class="popup-header">
+    <div class="popup-logo">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    </div>
+    <div class="popup-title">ProofHub<span class="popup-title-dot">.</span></div>
+    <button id="helpBtn" class="popup-help-btn" type="button" title="Open Instruction Manual" aria-label="Open Instruction Manual">?</button>
+  </div>
+
+  <div class="popup-body">
+    <div id="warning"></div>
+
+    <div class="target-group">
+      <div class="target-label-row">
+        <label class="target-label" for="targetSelect">Working On</label>
+        <span class="target-mode-tag" id="targetModeTag">Task</span>
+      </div>
+      <select id="targetSelect"></select>
+    </div>
+
+    <button id="captureBtn" type="button">Capture Actual (1/2)</button>
+    <button id="settingsBtn" type="button">Settings &amp; Task Lists</button>
+  </div>
+
+  <script type="module" src="./popup.js"></script>
+</body>
+</html>

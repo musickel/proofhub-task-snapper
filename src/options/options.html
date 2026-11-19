@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <title>ProofHub Task Snapper — Settings</title>
+  <link rel="stylesheet" href="./options.css">
+</head>
+<body>
+  <header class="ph-topbar">
+    <div class="ph-brand">
+      <div class="ph-logo-mark">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      </div>
+      <div class="ph-brand-text">
+        <span class="ph-wordmark">ProofHub<span class="ph-wordmark-dot">.</span></span>
+        <span class="ph-app-pill">Task Snapper</span>
+      </div>
+    </div>
+
+    <div class="ph-theme-control">
+      <span class="ph-theme-label" id="themeStatusLabel">Light Theme</span>
+      <label class="ph-switch" title="Toggle ProofHub Dark Mode">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="ph-slider"></span>
+      </label>
+    </div>
+  </header>
+
+  <main class="ph-container">
+    <!-- Card 1: Credentials & Shortcut -->
+    <section class="ph-card">
+      <div class="ph-card-header">
+        <div>
+          <h2 class="ph-card-title">Workspace Connection &amp; Shortcut</h2>
+          <p class="ph-card-subtitle">Configure your ProofHub API key and quick capture keyboard shortcut</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="ph-label" for="apiKey">ProofHub API Key</label>
+        <input type="password" id="apiKey" placeholder="Paste your ProofHub API Key" autocomplete="off">
+      </div>
+
+      <div class="form-group">
+        <label class="ph-label" for="shortcutInput">Screenshot Capture Shortcut</label>
+        <div class="shortcut-row">
+          <input type="text" id="shortcutInput" readonly placeholder="Click here and press shortcut keys (e.g. Ctrl+Z+C)">
+          <button type="button" id="resetShortcutBtn" class="secondary">Reset Default</button>
+        </div>
+        <div id="shortcutError" class="error-msg"></div>
+        <div class="helper-text">
+          Click the box above and press your key combination (must include <strong>Ctrl</strong>, <strong>Alt</strong>, or <strong>Cmd</strong> + at least one key).
+        </div>
+      </div>
+    </section>
+
+    <!-- Card 2: Task Lists / Tasks & Field Mapping -->
+    <section class="ph-card">
+      <div class="ph-card-header">
+        <div>
+          <h2 class="ph-card-title">Task Lists &amp; Parent Tasks</h2>
+          <p class="ph-card-subtitle">Add a Task List URL to create Tasks, or a Task URL to create Subtasks</p>
+        </div>
+      </div>
+
+      <div id="taskListsContainer"></div>
+
+      <div class="add-list-box field-stack">
+        <h3 class="add-list-box-title">+ Add Task List or Parent Task</h3>
+        <p class="add-list-box-desc">Paste a <strong>Task List URL</strong> (creates Tasks) or a <strong>Task URL</strong> (creates Subtasks)</p>
+        <input type="text" id="newProjectName" placeholder="Project Name (e.g. Web Portal QA)">
+        <input type="text" id="newListName" placeholder="Task List Name or Parent Task Name">
+        <input type="text" id="newListUrl" placeholder="ProofHub URL (e.g. .../project-XXXX/list-XXXX or .../project-XXXX/list-XXXX/task-XXXX)">
+        <div class="btn-row">
+          <button type="button" id="addTaskListBtn">Add &amp; Fetch Fields</button>
+        </div>
+        <div id="taskListStatus" class="status-msg"></div>
+      </div>
+    </section>
+
+    <div>
+      <button type="button" id="saveBtn" class="brand-save">Save All Settings</button>
+      <div id="saveStatus" class="status-msg"></div>
+    </div>
+  </main>
+
+  <script type="module" src="./options.js"></script>
+</body>
+</html>

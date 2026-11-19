@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProofHub Task Snapper — Instruction Manual</title>
+  <link rel="stylesheet" href="./help.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo-mark">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      </div>
+      <div>
+        <div class="brand-name">ProofHub<span>.</span></div>
+        <div class="brand-product">Task Snapper Instruction Manual</div>
+      </div>
+    </div>
+    <div class="theme-status"><span id="themeDot"></span><span id="themeLabel">Light Theme</span></div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">QUICK START GUIDE</span>
+      <h1>Capture issues. Create ProofHub tasks.</h1>
+      <p>Use ProofHub Task Snapper to capture an actual screenshot, optionally capture an expected page screenshot, and create a task or subtask directly in ProofHub.</p>
+    </section>
+
+    <nav class="contents" aria-label="Manual sections">
+      <a href="#setup">1. Set up</a>
+      <a href="#capture">2. Capture screenshots</a>
+      <a href="#task">3. Create a task</a>
+      <a href="#tools">4. Annotation tools</a>
+      <a href="#troubleshooting">5. Troubleshooting</a>
+    </nav>
+
+    <section class="manual-card" id="setup">
+      <h2><span>1</span> Set up the extension</h2>
+      <ol>
+        <li>Open the extension popup and select <strong>Settings &amp; Task Lists</strong>.</li>
+        <li>Enter your ProofHub API key in the password field.</li>
+        <li>Add a <strong>Task List URL</strong> to create tasks, or a <strong>Task URL</strong> to create subtasks.</li>
+        <li>Select your preferred light or dark theme.</li>
+        <li>Save all settings. The popup and capture screens will follow your selected theme.</li>
+      </ol>
+    </section>
+
+    <section class="manual-card" id="capture">
+      <h2><span>2</span> Capture screenshots</h2>
+      <ol>
+        <li>Open the webpage you want to capture and select the target task or task list in the popup.</li>
+        <li>Select <strong>Capture Actual (1/2)</strong>, or use the configured keyboard shortcut.</li>
+        <li>Select and crop the area you want to capture. Annotate it if needed, then confirm the screenshot.</li>
+        <li>Navigate to the expected page if it is different, or stay on the current page.</li>
+        <li>Select <strong>Capture Expected (2/2)</strong>. Expected screenshots can be skipped when no expected page is needed.</li>
+      </ol>
+    </section>
+
+    <section class="manual-card" id="task">
+      <h2><span>3</span> Create a task or subtask</h2>
+      <ol>
+        <li>After the screenshots are ready, the task details popup opens automatically.</li>
+        <li>Enter a title and optional description.</li>
+        <li>Select the destination task list or parent task.</li>
+        <li>Complete any additional ProofHub fields shown for the selected destination.</li>
+        <li>Select <strong>Add Task</strong> or <strong>Add Subtask</strong>. Use the × button at the top to close and cancel.</li>
+      </ol>
+      <div class="note"><strong>Note:</strong> The task description includes the actual screenshot and expected screenshot when captured. The displayed Page URL is the URL from the actual screenshot page.</div>
+    </section>
+
+    <section class="manual-card" id="tools">
+      <h2><span>4</span> Annotation tools</h2>
+      <div class="tool-grid">
+        <div><strong>Highlight</strong><p>Mark an area with a semi-transparent highlight.</p></div>
+        <div><strong>Rectangle</strong><p>Draw a rectangular outline around an issue.</p></div>
+        <div><strong>Arrow</strong><p>Point directly to the area that needs attention.</p></div>
+        <div><strong>Text</strong><p>Add a text note over the screenshot.</p></div>
+        <div><strong>Color</strong><p>Change the annotation color.</p></div>
+        <div><strong>Undo / Reset</strong><p>Remove annotations or start the crop again.</p></div>
+      </div>
+    </section>
+
+    <section class="manual-card" id="troubleshooting">
+      <h2><span>5</span> Troubleshooting</h2>
+      <ul>
+        <li><strong>Capture does not start:</strong> Open a regular website instead of a browser settings, extension, or blank page.</li>
+        <li><strong>API key rejected:</strong> Verify the key and confirm it is entered in extension Settings.</li>
+        <li><strong>No destination shown:</strong> Add and save a valid ProofHub Task List or Task URL.</li>
+        <li><strong>Shortcuts conflict:</strong> Configure a new shortcut in Settings. It must include Ctrl, Alt, or Cmd.</li>
+        <li><strong>Dark mode missing:</strong> Save Dark Theme in Settings, then reopen the popup or capture screen.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script type="module" src="./help.js"></script>
+</body>
+</html>

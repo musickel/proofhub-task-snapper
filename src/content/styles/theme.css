@@ -1,0 +1,48 @@
+/* ProofHub Theme Variables (Light & Dark) */
+#ts-overlay-container.ts-theme-light,
+#ts-step2-banner.ts-theme-light,
+#ts-modal-backdrop.ts-theme-light,
+#ts-description-modal.ts-theme-light {
+  --ph-surface: #ffffff;
+  --ph-surface-header: #f8f9fb;
+  --ph-surface-subtle: #f4f5f7;
+  --ph-surface-input: #fafbfc;
+  --ph-surface-input-focus: #ffffff;
+  --ph-text-primary: #172b4d;
+  --ph-text-secondary: #5e6c84;
+  --ph-text-muted: #7a869a;
+  --ph-border: #dfe1e6;
+  --ph-border-subtle: #ebecf0;
+  --ph-brand-green: #029944;
+  --ph-accent-blue: #1d6ce0;
+  --ph-accent-blue-hover: #1558bd;
+  --ph-accent-blue-soft: rgba(29, 108, 224, 0.16);
+  --ph-btn-sec-bg: #ebecf0;
+  --ph-btn-sec-hover: #dfe1e6;
+  --ph-btn-sec-text: #172b4d;
+  --ph-shadow-modal: 0 14px 36px rgba(9, 30, 66, 0.25), 0 0 1px rgba(9, 30, 66, 0.3);
+}
+
+#ts-overlay-container.ts-theme-dark,
+#ts-step2-banner.ts-theme-dark,
+#ts-modal-backdrop.ts-theme-dark,
+#ts-description-modal.ts-theme-dark {
+  --ph-surface: #1e2025;
+  --ph-surface-header: #16181d;
+  --ph-surface-subtle: #252830;
+  --ph-surface-input: #16181d;
+  --ph-surface-input-focus: #1a1d24;
+  --ph-text-primary: #f1f3f5;
+  --ph-text-secondary: #a1a8b5;
+  --ph-text-muted: #78808f;
+  --ph-border: #2f333d;
+  --ph-border-subtle: #282c35;
+  --ph-brand-green: #10b981;
+  --ph-accent-blue: #3b82f6;
+  --ph-accent-blue-hover: #2563eb;
+  --ph-accent-blue-soft: rgba(59, 130, 246, 0.22);
+  --ph-btn-sec-bg: #2a2e38;
+  --ph-btn-sec-hover: #353a47;
+  --ph-btn-sec-text: #e5e7eb;
+  --ph-shadow-modal: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 1px rgba(255, 255, 255, 0.12);
+}

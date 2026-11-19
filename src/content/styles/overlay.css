@@ -1,0 +1,407 @@
+#ts-overlay-container {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 2147483647 !important;
+  cursor: crosshair;
+  box-sizing: border-box !important;
+}
+
+#ts-overlay-container canvas {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+#ts-phase-badge {
+  position: fixed !important;
+  top: 16px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  padding: 6px 8px 6px 16px !important;
+  border-radius: 22px !important;
+  color: #ffffff !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  z-index: 2147483649 !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  cursor: default !important;
+  box-sizing: border-box !important;
+}
+
+#ts-phase-badge.actual {
+  background: #de350b !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+}
+
+#ts-phase-badge.expected {
+  background: #029944 !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+}
+
+#ts-top-skip-btn {
+  padding: 4px 10px !important;
+  border-radius: 14px !important;
+  border: 1px solid rgba(255, 255, 255, 0.65) !important;
+  background: rgba(0, 0, 0, 0.25) !important;
+  color: #ffffff !important;
+  font-family: inherit !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  margin: 0 !important;
+}
+
+#ts-top-skip-btn:hover {
+  background: #ffffff !important;
+  color: #172b4d !important;
+}
+
+#ts-close-overlay-btn {
+  position: fixed !important;
+  top: 16px !important;
+  right: 16px !important;
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 50% !important;
+  border: 1px solid var(--ph-border) !important;
+  background: var(--ph-surface) !important;
+  color: var(--ph-text-primary) !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 22px !important;
+  line-height: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  z-index: 2147483649 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#ts-close-overlay-btn:hover {
+  background: #de350b !important;
+  border-color: #de350b !important;
+  color: #ffffff !important;
+}
+
+/* ProofHub Step 2 Floating Banner */
+#ts-step2-banner {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  width: 375px !important;
+  background: var(--ph-surface) !important;
+  color: var(--ph-text-primary) !important;
+  border: 1px solid var(--ph-border) !important;
+  border-left: 4px solid var(--ph-brand-green) !important;
+  border-radius: 8px !important;
+  padding: 12px !important;
+  display: flex !important;
+  gap: 10px !important;
+  align-items: center !important;
+  z-index: 2147483647 !important;
+  box-shadow: var(--ph-shadow-modal) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+  box-sizing: border-box !important;
+  text-align: left !important;
+}
+
+#ts-step2-banner img {
+  width: 64px !important;
+  height: 48px !important;
+  object-fit: contain !important;
+  background: #14161a !important;
+  border-radius: 4px !important;
+  border: 1px solid var(--ph-border) !important;
+  flex-shrink: 0 !important;
+}
+
+.ts-step2-info {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  flex: 1 !important;
+}
+
+.ts-step2-info strong {
+  font-size: 13px !important;
+  color: var(--ph-brand-green) !important;
+  line-height: 1.3 !important;
+}
+
+.ts-step2-info span {
+  font-size: 11px !important;
+  color: var(--ph-text-secondary) !important;
+  line-height: 1.35 !important;
+}
+
+.ts-step2-actions {
+  display: flex !important;
+  gap: 6px !important;
+  margin-top: 4px !important;
+}
+
+.ts-step2-capture-btn {
+  padding: 5px 10px !important;
+  background: var(--ph-brand-green) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 5px !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  cursor: pointer !important;
+}
+
+.ts-step2-capture-btn:hover {
+  filter: brightness(0.94) !important;
+}
+
+.ts-step2-skip-btn {
+  padding: 5px 9px !important;
+  background: var(--ph-btn-sec-bg) !important;
+  color: var(--ph-btn-sec-text) !important;
+  border: 1px solid var(--ph-border) !important;
+  border-radius: 5px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  cursor: pointer !important;
+}
+
+.ts-step2-skip-btn:hover {
+  background: var(--ph-btn-sec-hover) !important;
+}
+
+.ts-step2-cancel-btn {
+  padding: 5px 8px !important;
+  background: transparent !important;
+  color: var(--ph-text-secondary) !important;
+  border: 1px solid var(--ph-border) !important;
+  border-radius: 5px !important;
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+  cursor: pointer !important;
+}
+
+.ts-step2-cancel-btn:hover {
+  background: #de350b !important;
+  border-color: #de350b !important;
+  color: #ffffff !important;
+}
+
+/* ProofHub Annotation Toolbar */
+#ts-toolbar {
+  position: fixed !important;
+  background: var(--ph-surface) !important;
+  border: 1px solid var(--ph-border) !important;
+  padding: 6px 8px !important;
+  border-radius: 8px !important;
+  box-shadow: var(--ph-shadow-modal) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  z-index: 2147483648 !important;
+  cursor: default !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+  box-sizing: border-box !important;
+}
+
+#ts-toolbar button:not(.ts-color-swatch) {
+  padding: 5px 9px !important;
+  cursor: pointer !important;
+  border: 1px solid var(--ph-border) !important;
+  background: var(--ph-surface-subtle) !important;
+  border-radius: 5px !important;
+  color: var(--ph-text-primary) !important;
+  font-family: inherit !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  margin: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+#ts-toolbar button:not(.ts-color-swatch):hover {
+  background: var(--ph-btn-sec-hover) !important;
+}
+
+#ts-toolbar button:not(.ts-color-swatch).active {
+  background: var(--ph-accent-blue) !important;
+  color: #ffffff !important;
+  border-color: var(--ph-accent-blue) !important;
+}
+
+.ts-color-group {
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  padding: 0 6px !important;
+  border-left: 1px solid var(--ph-border) !important;
+  border-right: 1px solid var(--ph-border) !important;
+}
+
+#ts-toolbar button.ts-color-swatch {
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  min-height: 18px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 50% !important;
+  border: 2px solid var(--ph-surface) !important;
+  box-shadow: 0 0 0 1px #888 !important;
+  cursor: pointer !important;
+  flex-shrink: 0 !important;
+}
+
+#ts-toolbar button.ts-color-swatch.active {
+  transform: scale(1.2) !important;
+  box-shadow: 0 0 0 2px var(--ph-accent-blue) !important;
+}
+
+#ts-toolbar button.ts-toolbar-check {
+  background: var(--ph-brand-green) !important;
+  color: #ffffff !important;
+  border-color: var(--ph-brand-green) !important;
+  font-weight: 700 !important;
+}
+
+#ts-toolbar button.ts-toolbar-check:hover {
+  filter: brightness(0.94) !important;
+}
+
+#ts-toolbar button.ts-toolbar-skip {
+  background: var(--ph-btn-sec-bg) !important;
+  color: var(--ph-btn-sec-text) !important;
+  border-color: var(--ph-border) !important;
+  font-weight: 700 !important;
+}
+
+#ts-toolbar button.ts-toolbar-skip:hover {
+  background: var(--ph-btn-sec-hover) !important;
+}
+
+#ts-toolbar button.ts-toolbar-close {
+  color: #de350b !important;
+  font-weight: 700 !important;
+}
+
+#ts-toolbar button.ts-toolbar-close:hover {
+  background: #de350b !important;
+  color: #ffffff !important;
+  border-color: #de350b !important;
+}
+
+#ts-text-editor {
+  position: fixed !important;
+  z-index: 2147483649 !important;
+  display: grid !important;
+  grid-template-columns: 24px minmax(140px, 260px) 34px !important;
+  grid-template-rows: 28px 34px !important;
+  gap: 4px !important;
+  padding: 5px !important;
+  background: var(--ph-surface) !important;
+  border: 1px solid var(--ph-accent-blue) !important;
+  border-radius: 6px !important;
+  box-shadow: var(--ph-shadow-modal) !important;
+  box-sizing: border-box !important;
+  font-family: Arial, sans-serif !important;
+}
+
+.ts-text-drag-handle {
+  grid-column: 1 !important;
+  grid-row: 1 / span 2 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  writing-mode: vertical-rl !important;
+  color: var(--ph-text-muted) !important;
+  font-size: 11px !important;
+  letter-spacing: 1px !important;
+  cursor: move !important;
+  user-select: none !important;
+}
+
+#ts-inline-text-input {
+  grid-column: 2 !important;
+  grid-row: 1 / span 2 !important;
+  width: 260px !important;
+  min-width: 140px !important;
+  min-height: 62px !important;
+  resize: both !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  border: 1px dashed var(--ph-accent-blue) !important;
+  border-radius: 4px !important;
+  padding: 5px 7px !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 22px !important;
+  outline: none !important;
+  box-sizing: border-box !important;
+}
+
+.ts-text-format-controls {
+  grid-column: 3 !important;
+  grid-row: 1 / span 2 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 4px !important;
+}
+
+.ts-text-format-controls select,
+.ts-text-format-btn {
+  width: 32px !important;
+  height: 28px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 1px solid var(--ph-border) !important;
+  border-radius: 4px !important;
+  background: var(--ph-surface-subtle) !important;
+  color: var(--ph-text-primary) !important;
+  font-family: inherit !important;
+  font-size: 12px !important;
+  text-align: center !important;
+  cursor: pointer !important;
+  box-sizing: border-box !important;
+}
+
+.ts-text-format-controls select {
+  appearance: auto !important;
+}
+
+.ts-text-format-btn {
+  font-weight: 700 !important;
+}
+
+.ts-text-format-btn:last-child {
+  font-family: Georgia, serif !important;
+  font-style: italic !important;
+}
+
+.ts-text-format-btn.active {
+  background: var(--ph-accent-blue) !important;
+  color: #ffffff !important;
+  border-color: var(--ph-accent-blue) !important;
+}

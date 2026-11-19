@@ -1,0 +1,220 @@
+* {
+  box-sizing: border-box;
+}
+
+:root,
+html[data-theme="light"] {
+  --bg-popup: #ffffff;
+  --bg-header: #f8f9fb;
+  --bg-input: #fafbfc;
+  --text-primary: #172b4d;
+  --text-secondary: #5e6c84;
+  --border-color: #dfe1e6;
+  --brand-green: #029944;
+  --brand-green-soft: rgba(2, 153, 68, 0.12);
+  --accent-blue: #1d6ce0;
+  --accent-blue-hover: #1558bd;
+  --accent-blue-soft: rgba(29, 108, 224, 0.12);
+  --btn-sec-bg: #f4f5f7;
+  --btn-sec-hover: #ebecf0;
+  --btn-sec-text: #172b4d;
+  --danger-text: #de350b;
+  --danger-bg: #ffebe6;
+  --danger-border: #ffbdad;
+}
+
+html[data-theme="dark"] {
+  --bg-popup: #1e2025;
+  --bg-header: #16181d;
+  --bg-input: #16181d;
+  --text-primary: #f1f3f5;
+  --text-secondary: #a1a8b5;
+  --border-color: #2f333d;
+  --brand-green: #10b981;
+  --brand-green-soft: rgba(16, 185, 129, 0.16);
+  --accent-blue: #3b82f6;
+  --accent-blue-hover: #2563eb;
+  --accent-blue-soft: rgba(59, 130, 246, 0.18);
+  --btn-sec-bg: #282c35;
+  --btn-sec-hover: #323743;
+  --btn-sec-text: #e5e7eb;
+  --danger-text: #f87171;
+  --danger-bg: rgba(239, 68, 68, 0.15);
+  --danger-border: rgba(239, 68, 68, 0.35);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  width: 286px;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-popup);
+  color: var(--text-primary);
+}
+
+.popup-header {
+  background: var(--bg-header);
+  border-bottom: 1px solid var(--border-color);
+  padding: 11px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.popup-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: var(--brand-green);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.popup-title-dot {
+  color: var(--brand-green);
+}
+
+.popup-pill {
+  margin-left: auto;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 10px;
+  background: var(--brand-green-soft);
+  color: var(--brand-green);
+  text-transform: uppercase;
+}
+
+.popup-help-btn {
+  margin-left: auto !important;
+  width: 22px !important;
+  height: 22px !important;
+  min-width: 22px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 50% !important;
+  background: var(--btn-sec-bg) !important;
+  color: var(--text-secondary) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+}
+
+.popup-help-btn:hover {
+  background: var(--btn-sec-hover) !important;
+  color: var(--accent-blue) !important;
+}
+
+.popup-body {
+  padding: 13px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.target-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.target-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.target-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: var(--text-secondary);
+}
+
+.target-mode-tag {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 8px;
+  background: var(--accent-blue-soft);
+  color: var(--accent-blue);
+}
+
+#targetSelect {
+  width: 100%;
+  padding: 7px 9px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--bg-input);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#targetSelect:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 2px var(--accent-blue-soft);
+}
+
+button {
+  width: 100%;
+  padding: 9px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.15s;
+}
+
+#captureBtn {
+  background: var(--accent-blue);
+  color: #ffffff;
+}
+
+#captureBtn:hover:not(:disabled) {
+  background: var(--accent-blue-hover);
+}
+
+#captureBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#settingsBtn {
+  background: var(--btn-sec-bg);
+  color: var(--btn-sec-text);
+  border: 1px solid var(--border-color);
+}
+
+#settingsBtn:hover {
+  background: var(--btn-sec-hover);
+}
+
+#warning {
+  display: none;
+  font-size: 11px;
+  color: var(--danger-text);
+  background: var(--danger-bg);
+  border: 1px solid var(--danger-border);
+  padding: 7px 9px;
+  border-radius: 6px;
+  line-height: 1.4;
+}

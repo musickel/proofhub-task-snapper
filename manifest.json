@@ -1,0 +1,59 @@
+{
+  "manifest_version": 3,
+  "name": "ProofHub Task Snapper",
+  "version": "1.0",
+  "description": "Take Actual & Expected screenshots, annotate them, and create Tasks or Subtasks in ProofHub.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "icons": {
+    "128": "icon-ph-ss.png"
+  },
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_title": "ProofHub Task Snapper",
+    "default_icon": "icon-ph-ss.png"
+  },
+  "background": {
+    "service_worker": "src/background/index.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": [
+        "src/content/styles/theme.css",
+        "src/content/styles/overlay.css",
+        "src/content/styles/modal.css"
+      ],
+      "js": [
+        "src/content/state.js",
+        "src/content/canvas-tools.js",
+        "src/content/toolbar.js",
+        "src/content/banner.js",
+        "src/content/modal-fields.js",
+        "src/content/modal.js",
+        "src/content/index.js"
+      ]
+    }
+  ],
+  "options_ui": {
+    "page": "src/options/options.html",
+    "open_in_tab": true
+  },
+  "commands": {
+    "take_screenshot": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E",
+        "mac": "Command+Shift+E"
+      },
+      "description": "Capture screen for ProofHub task creation"
+    }
+  }
+}
